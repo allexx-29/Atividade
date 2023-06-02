@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style/custom.css">
     <title>Document</title>
 </head>
@@ -14,31 +14,73 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>Frutas</h1>
+                    <h1>Logo</h1>
                 </div>
                 <div class="col">
                     <ul class="nav justify-content-end">
                         <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contatos">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+
+    <section>
+        <div id="carouselExampleFade" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <div class="ratio ratio-21x9">
+                        <img src="data:image/png;base64,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" class="d-block w-100" alt="...">
+                    </div>
+                    
+                </div>
+                <div class="carousel-item">
+                    <div class="ratio ratio-21x9">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ4Of9VP3A1gUfnYDknLVmFot5T0EVWf-Grg&usqp=CAU" class="d-block w-100 opacity-75" alt="...">
+                    </div>
+                    
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="carousel-item">
+                    <div class="ratio ratio-21x9">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuKNtSqm-YS_QS7w9waYUCSzsU56yo2r7k1A&usqp=CAU" class="d-block w-100 opacity-75" alt="...">
+                    </div>
+        </div>
+
+        <div class="carousel-item">
+                        <div class="ratio ratio-21x9">
+                            <img src="./images/pexels-vojtech-okenka-392018.jpg" class="d-block w-100 opacity-75" alt="...">
+                        </div>
+                        
+        </div>
+                    
+            </div>
+    </section>
     
     <section id="sobre">
         <div class="container">
             <div class="row">
                 <div class="col-md-7 col-sm-12">
-                    <h2>Todas as frutas</h2>
+                    <h2>Sobre nós</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero doloribus veniam incidunt reprehenderit. Itaque, culpa? Rerum, excepturi vero hic error aperiam voluptatibus qui ducimus cupiditate quod consequatur blanditiis aut.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vero doloribus veniam incidunt reprehenderit. Itaque, culpa? Rerum, excepturi vero hic error aperiam voluptatibus qui ducimus cupiditate quod consequatur blanditiis aut.</p>
                     <a class="btn btn-lg btn-success">Botão</a>
                 </div>
                 <div class="col-md-5 col-sm-12">
-                    <img src="https://shopee.com.br/blog/wp-content/uploads/2022/02/frutas-do-outono.jpg" alt="Imagem Exemplo" class="img-fluid">
+                    <img src="./images/pexels-josh-sorenson-1714208.jpg" alt="Imagem Exemplo" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -53,29 +95,29 @@
                     <h2>Produtos</h2>
 
                     <div class="card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbcS4DoJFpilpS7NtRMi-k6yiYSHKMldiQKw&usqp=CAU" alt="Imagem Exemplo" class="img-fluid">
+                        <img src="./images/pexels-josh-sorenson-1714208.jpg" alt="Imagem Exemplo" class="img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Morango</h5>
-                            <p class="card-text"> Morango (Fragaria x ananassa) é considerado,    na linguagem vulgar, como o fruto vermelho do morangueiro, da família das rosáceas.</p>
+                            <h5 class="card-title">Lorem ipsum dolor</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
                             <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-1" >ver produto</a>
                         </div>
                     </div>
 
                     <div class="card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfgzMDJX4ZA0AcrDDxMHhtg6GnPr7OAaY57Q&usqp=CAU" alt="Imagem Exemplo" class="img-fluid">
+                        <img src="./images/pexels-josh-sorenson-1714208.jpg" alt="Imagem Exemplo" class="img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Abacate</h5>
-                            <p class="card-text">O abacate é o fruto comestível do abacateiro (Persea americana), uma árvore da família da Lauraceae nativa do México e da América do Sul.</p>
-                            <a class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#modal-1">ver produto</a>
+                            <h5 class="card-title">Lorem ipsum dolor</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <a class="btn btn-primary" href="#produto-2">ver produto</a>
                         </div>
                     </div>
 
                     <div class="card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJA9FGykDD2CPCi_fwmsJSiYWUuWJWYk4Tw&usqp=CAU" alt="Imagem Exemplo" class="img-fluid">
+                        <img src="./images/pexels-josh-sorenson-1714208.jpg" alt="Imagem Exemplo" class="img-fluid">
                         <div class="card-body">
-                            <h5 class="card-title">Atemoia</h5>
-                            <p class="card-text">A atemoia é uma fruta híbrida entre a chirimoia e a fruta-pinha ou fruta-do-conde (Annona Squamosa), da família das anonáceas.</p>
-                            <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-1">ver produto</a>
+                            <h5 class="card-title">Lorem ipsum dolor</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+                            <a class="btn btn-primary" href="#produto-3">ver produto</a>
                         </div>
                     </div>
                     
@@ -123,30 +165,30 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Produto </h5>
+                    <h5 class="modal-title">Produto 1</h5>
                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6>Confira os preços da frutas</h6>
+                    <h6>Confira o tamanho e os preços</h6>
                     <table class="table table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>fruta</th>
+                                <th>Tamanho</th>
                                 <th>Valor</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Morango</td>
-                                <td>R$ 12,99</td>
+                                <td>P</td>
+                                <td>R$ 100</td>
                             </tr>
                             <tr>
-                                <td>Abacate</td>
-                                <td>R$ 1,90</td>
+                                <td>M</td>
+                                <td>R$ 200</td>
                             </tr>
                             <tr>
-                                <td>Atemoia</td>
-                                <td>R$ 12,39</td>
+                                <td>G</td>
+                                <td>R$ 300</td>
                             </tr>
                         </tbody>
                     </table>
@@ -155,12 +197,11 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
-                
             </div>
         </div>
 
     </div>
 
-    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
